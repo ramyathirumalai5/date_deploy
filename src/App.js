@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React,{ Component } from 'react';
+import './App.css';
+import Datetime from './Components/Datetime';
+import Header from './Components/Header';
+
+class App extends Component {
+  state = {
+    displayBoth:true
+  }
+
+  toggleButton = () =>{
+    
+    const current = this.state.displayBoth;
+    this.setState({displayBoth:!current});
+    
+  }
+  render () {
+    let buttonName;
+    if(this.state.displayBoth)
+    {
+      buttonName = ' Display Time only';
+    }
+    else
+    {
+      buttonName = ' Show Date and time';
+    }
+
+    
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header toggleButton = {this.toggleButton} buttonName = {buttonName}/>
+     <Datetime displayBoth = {this.state.displayBoth ? true : false}/>
     </div>
   );
+}
+
 }
 
 export default App;
