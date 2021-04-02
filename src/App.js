@@ -16,20 +16,11 @@ class App extends Component {
     
   }
   render () {
-    let buttonName;
-    if(this.state.displayBoth)
-    {
-      buttonName = ' Display Time only';
-    }
-    else
-    {
-      buttonName = ' Show Date and time';
-    }
 
     
   return (
     <div className="App">
-      <Header toggleButton = {this.toggleButton} buttonName = {buttonName}/>
+      <Header toggleButton = {this.toggleButton} />
      <Datetime displayBoth = {this.state.displayBoth ? true : false}/>
     </div>
   );

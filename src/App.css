@@ -1,38 +1,117 @@
 .App {
   text-align: center;
 }
+.card{
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  text-align: center;
+  margin:auto;
+  width:40%;
+  height:20%;
+  border: 1px solid lightgray;
+  border-radius: 5px;;
+  box-shadow: 0 0 10px darkgray;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.card2{
+
+  text-align: center;
+  margin:auto;
+  width:40%;
+  height:250px;;
+
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0 0 10px darkgray;
+  margin-top: 70px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.inner{
+  position: relative;
+   width:80px;
+   height:40px;
+   -webkit-appearance: none;
+   background-color: gray;
+   outline: none;
+   border-radius: 20px;
+   
+  
+ }
+ 
+ .inner:checked{
+   background-color: darkgray;
+ }
+ 
+ .inner::before{
+   content:'';
+   position:absolute;
+   width:40px;
+   height:40px;
+   border-radius: 20px;
+   top:0;
+   left:0;
+   background-color: lightgrey; 
+   transform: scale(1.2);
+   transition:all 300ms ease-in-out;
+ }
+ 
+ .inner:checked::before{
+   left:40px;
+   transition:all 300ms ease-in-out;
+ }
+
+ .clock{
+  width: 140px;
+  height:140px;
+  border-radius: 50%;
+  border: 3px solid black;
+  position: relative;
+  top: 50%;
+  left: 35%;
 }
 
-.App-link {
-  color: #61dafb;
+.num{
+--rotation:0;
+font-size: xx-small;
+position:absolute;
+width:100%;
+height:100%;
+text-align: center;
+transform:rotate(var(--rotation));
+}
+.num1{ --rotation: 30deg;}
+.num2{ --rotation: 60deg;}
+.num3{ --rotation: 90deg;}
+.num4{ --rotation: 120deg;}
+.num5{ --rotation: 150deg;}
+.num6{ --rotation: 180deg;}
+.num7{ --rotation: 210deg;}
+.num8{ --rotation: 240deg;}
+.num9{ --rotation: 270deg;}
+.num10{ --rotation: 300deg;}
+.num11{ --rotation: 330deg;}
+
+.time-display{
+  position: absolute;
+  top:33px;
+  left: 28px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dateIcon{
+  position:absolute;
+  top:24%;
+  left:39%;
+}
+
+.timeIcon{
+  position:absolute;
+  top:24%;
+  left:42%;
+}
+
+.timeIcon2{
+  position:absolute;
+  top:24%;
+  left:54%;
 }
