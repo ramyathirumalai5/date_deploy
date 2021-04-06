@@ -24,7 +24,7 @@ class Datetime extends Component {
       <div className ="card2">
       <div >
         {this.props.displayBoth && <h3> <i class="far fa-calendar-alt"></i> : {dateFormat} </h3>}
-      <div style ={{marginTop:'30px'}} >
+      <div className = "clockPosition" >
         <div className = "clock">
       <div className ="num num1"> 1      </div>
       <div className ="num num2"> 2      </div>

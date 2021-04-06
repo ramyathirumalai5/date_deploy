@@ -14,7 +14,13 @@ const Outerdiv = styled.div`
   const Container = styled.div`
   position:absolute;
   top:23%;
-  left:46%;`;
+  left:46%;
+  
+  @media (max-width: 760px) {
+    top: 30%;
+    left: 40%;
+    }
+  `
 
   
 
@@ -34,7 +40,7 @@ class Header extends Component {
      
           <br></br>
           <i class="fas fa-calendar-alt dateIcon fa-2x"></i>
-          &amp;    <i class="far fa-clock timeIcon fa-2x"></i>
+            <i class="far fa-clock timeIcon fa-2x"></i>
         <Container>
            <input type="checkbox" className = "inner" onClick = {this.props.toggleButton}></input>
           </Container>     

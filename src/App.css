@@ -102,16 +102,44 @@ transform:rotate(var(--rotation));
   position:absolute;
   top:24%;
   left:39%;
+  @media (max-width: 760px) {
+    display:none;
+  }
 }
 
 .timeIcon{
   position:absolute;
   top:24%;
   left:42%;
+  
 }
 
 .timeIcon2{
   position:absolute;
   top:24%;
   left:54%;
+ }
+
+ .clockPosition{
+  margin-top:30px;
+ }
+
+@media (max-width: 760px) {
+  .timeIcon,.dateIcon,.timeIcon2{
+  display:none;
+  }
+  .clock{
+    width: 100px;
+    height:100px;
+   /*  border-radius: 50%;
+    border: 3px solid black; */
+    position: relative;
+    top: 50%;
+    left: 20%;
+  }
+  .time-display{
+    position: absolute;
+    top:15px;
+    left: 15px;
+  }
 }
